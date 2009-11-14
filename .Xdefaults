@@ -1,0 +1,92 @@
+!#########################################
+!
+!	Xcursor.config
+!
+Xcursor*theme:			Vanilla-DMZ
+
+! #########################################
+!
+! 	Xterm config
+!
+XTerm*jumpScroll:		true
+XTerm*multiScroll:		true
+
+
+! #########################################
+!
+!	URxvt config
+!
+urxvt*background:		black
+urxvt*foreground:		#D9D9D9
+urxvt*fading:   		40
+urxvt*tintColor: 		#000000
+urxvt*transparent:		true
+urxvt*shading:   		20
+urxvt*inheritPixmap: 		true
+urxvt*scrollBar: 		false
+urxvt*title: 			Terminal
+urxvt*termName: 		rxvt
+urxvt*scrollTtyKeypress:    	true
+urxvt*scrollTtyOutput:      	false
+urxvt*scrollWithBuffer:     	false
+urxvt*urlLauncher:		firefox
+urxvt*matcher.button:		1
+urxvt*scrollstyle:      	plain
+urxvt*secondaryScroll:  	true
+urxvt*cutchars: 		`"'&()urxvt*,;<=>?@[]{|}$`
+urxvt*font: 			xft:Terminus:pixelsize=13:antialias=true:hinting=true
+urxvt*boldFont: 		xft:Terminus:pixelsize=13:antialias=true:bold:hinting=true
+urxvt*italicFont: 		xft:Terminus:pixelsize=13:antialias=true:italic:autohint=true:hinting=true
+urxvt*bolditalicFont: 		xft:Terminus:pixelsize=13:antialias=true:bold:italic:autohint=true:hinting=true
+urxvt*iconName:			rxvt
+
+! ########################################
+!
+! 	Yeahconsole.config
+!
+yeahconsole*restart:		1
+yeahconsole*toggleKey:		None+F1
+yeahconsole*keyFull:		Alt+f
+yeahconsole*background:  	black
+yeahconsole*foreground: 	white
+yeahconsole*loginShell:		True
+yeahconsole*consoleHeight: 	30
+yeahconsole*stepSize:		5
+yeahconsole*aniDelay:		3 
+yeahconsole*handleWidth:	1
+yeahconsole*handleColor:	black
+yeahconsole*term:		urxvt
+yeahconsole*scrollBar: 		false
+yeahconsole*reverseVideo: 	false
+yeahconsole*tintColor: 		#000000
+yeahconsole*inheritPixmap: 	true
+yeahconsole*shading:		25
+yeahconsole*fading:		25
+yeahconsole*saveLines: 		10000
+yeahconsole*cursorBlink: 	true
+yeahconsole*font: 		xft:Terminus:pixelsize=14:antialias=true:hinting=true
+
+!Theme Seven
+! http://phraktured.net/terminal-colors/terminal%20theme.tags.html
+*background: rgb:67/67/67
+*foreground: rgb:ff/ff/ff
+*color0:     rgb:00/00/00
+*color1:     rgb:bf/46/46
+*color2:     rgb:67/b2/5f
+*color3:     rgb:cf/c4/4e
+*color4:     rgb:51/60/83
+*color5:     rgb:ca/6e/ff
+*color6:     rgb:92/b2/f8
+*color7:     rgb:d5/d5/d5
+*color8:     rgb:00/00/00
+*color9:     rgb:f4/8a/8a
+*color10:    rgb:a5/d7/9f
+*color11:    rgb:e1/da/84
+*color12:    rgb:a2/bb/ff
+*color13:    rgb:e2/b0/ff
+*color14:    rgb:ba/cd/f8
+*color15:    rgb:d5/d5/d5
+
+! Xft
+Xft*dpi:		100
+Xft*antialias:		true
