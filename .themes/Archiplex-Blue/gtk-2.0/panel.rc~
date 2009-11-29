@@ -1,0 +1,112 @@
+style "theme-panel"
+{
+	bg_pixmap[NORMAL]	= "/Panels/panel-bg-dark.png"
+	bg[SELECTED]	= "#1793d1"
+	bg[NORMAL]	= "#3c3c3c"
+	bg[PRELIGHT]	= "#424242" 
+	bg[ACTIVE]	= "#333333"
+	bg[INSENSITIVE]	= "#3C3C3C"
+	fg[NORMAL]	= "#d4d4d4" 
+	fg[PRELIGHT]	= "#1793d1"
+	fg[SELECTED]	= "#d4d4d4"
+	fg[ACTIVE]	= "#1793d1"
+	fg[INSENSITIVE]	= "#666666"
+	text[NORMAL]	= "#222222"
+	text[PRELIGHT]	= "#1793d1"
+	text[SELECTED]	= "#1793d1"
+	text[ACTIVE]	= "#1793d1"
+	text[INSENSITIVE]	= "#666666"
+}
+widget "*PanelWidget*"		style "theme-panel"
+widget "*PanelApplet*"		style "theme-panel"
+widget "*fast-user-switch*"	style "theme-panel"
+class "PanelApp*"		style "theme-panel"
+class "PanelToplevel*"		style "theme-panel"
+#widget_class "*Mail*"		style "theme-panel" # Disabled to fix Evolution bug.
+#class "*Panel*"		style "theme-panel" # Disabled to fix bug.
+widget_class "*notif*"		style "theme-panel"
+widget_class "*Notif*"		style "theme-panel"
+widget_class "*Tray*"		style "theme-panel" 
+widget_class "*tray*"		style "theme-panel"
+widget "*Xfce*Panel*"		style "theme-panel"
+class "*Xfce*Panel*"		style "theme-panel"
+
+style "theme-panel-menubar"
+{
+	bg[NORMAL] 		= "#c13bb0"
+	  	engine "pixmap"
+	{
+		image
+		{
+			function = BOX
+			state    = NORMAL
+			border   = {4,4,4,0}
+			file     = "Panels/Normal.svg"
+		}
+		image
+		{
+			function = BOX
+			state    = PRELIGHT
+			border   = {4,4,4,0}
+			file     = "Panels/Prelight.svg"
+		}
+		image
+		{
+			function = BOX
+			state    = ACTIVE
+			border   = {4,4,4,0}
+			file     = "Panels/Active.svg"
+		}
+		image
+		{
+			function = BOX
+			state    = SELECTED
+			border   = {4,4,4,0}
+			file     = "Panels/Selected.svg"
+		}
+		image
+		{
+			function = BOX
+			state    = INSENSITIVE
+			border   = {4,4,4,0}
+			file     = "Panels/Insensitive.svg"
+		}
+	}
+
+}
+widget "*Panel*Menu*"		style "theme-panel-menubar"
+style "handles"
+{
+  	engine "pixmap"
+	{     		image
+    		{
+      		function			= HANDLE
+      		recolorable			= TRUE
+      		overlay_file			= "Panels/handle-v.png"
+      		overlay_stretch	= FALSE
+      		orientation			= VERTICAL
+    		}
+    		image
+    		{
+      		function			= HANDLE
+      		overlay_file			= "Panels/handle-h.png"
+      		overlay_stretch 		= FALSE
+     		orientation			= HORIZONTAL
+   		}
+}
+}
+class "*Panel*" style "handles"
+
+style "bold-panel-menu"
+{
+font_name = "Bold"
+}
+widget "*Panel*MenuBar*" style "bold-panel-menu"  
+widget "*gimmie*" style "bold-panel-menu"
+
+style "clock" = "panelbuttons"
+{
+font_name = "Bold"
+}
+widget "*.clock-applet-button.*" style:highest "clock"
+widget "*.clock-applet.*" style "clock"

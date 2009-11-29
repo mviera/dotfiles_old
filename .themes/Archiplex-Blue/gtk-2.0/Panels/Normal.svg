@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100" height="100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <linearGradient id="TroughShadow-LinearGradient" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgb(0%,0%,0%)" stop-opacity="50%"/>
+            <stop offset="50%" stop-color="rgb(0%,0%,0%)" stop-opacity="25%"/>
+            <stop offset="100%" stop-color="rgb(0%,0%,0%)" stop-opacity="50%"/>
+        </linearGradient>
+        <linearGradient id="ButtonHighlight-LinearGradient" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="rgb(100%,100%,100%)" stop-opacity="25%"/>
+            <stop offset="100%" stop-color="rgb(100%,100%,100%)" stop-opacity="0%"/>
+        </linearGradient>
+        <mask id="TroughShadow-Mask">
+    		<path d="m 0 2 a 2,2 0 0,1 2,-2 h 96 a 2,2 0 0,1 2,2 v 98 h -100 z" fill="rgb(100%,100%,100%)"/>
+    		<path d="m 1 3 a 2,2 0 0,1 2,-2 h 94 a 2,2 0 0,1 2,2 v 97 h -98 z" fill="rgb(0%,0%,0%)"/>
+        </mask>
+        <mask id="ButtonHighlight-Mask">
+    		<path d="m 1 3 a 2,2 0 0,1 2,-2 h 94 a 2,2 0 0,1 2,2 v 97 h -98 z" fill="rgb(100%,100%,100%)"/>
+    		<path d="m 2 4 a 2,2 0 0,1 2,-2 h 92 a 2,2 0 0,1 2,2 v 96 h -96 z" fill="rgb(0%,0%,0%)"/>
+        </mask>
+    </defs>
+    <path d="m 0 2 a 2,2 0 0,1 2,-2 h 96 a 2,2 0 0,1 2,2 v 98 h -100 z" fill="url(#TroughShadow-LinearGradient)" mask="url(#TroughShadow-Mask)"/>
+    <path d="m 1 3 a 2,2 0 0,1 2,-2 h 94 a 2,2 0 0,1 2,2 v 97 h -98 z" fill="url(#ButtonHighlight-LinearGradient)" mask="url(#ButtonHighlight-Mask)"/>
+</svg>

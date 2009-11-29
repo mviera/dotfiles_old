@@ -1,0 +1,411 @@
+#Archiplex Theme by Pakos - ja@pakos.biz
+#Based on Shiki-Colorsby perfectska04
+
+gtk-icon-sizes = "panel-menu=16,16:panel=16,16:gtk-button=16,16:gtk-large-toolbar=16,16:gtk-small-toolbar=16,16"
+gtk-button-images = 0  
+include "panel.rc"
+style "clearlooks-default"
+{
+	GtkButton      ::child-displacement-x = 0  
+	GtkButton      ::child-displacement-y = 0  
+	GtkButton      ::default-border       = { 0, 0, 0, 0 }
+	GtkCheckButton ::indicator-size       = 14
+	GtkRadioButton ::indicator-size       = 14
+	GtkPaned       ::handle-size          = 6
+
+	GtkRange       ::trough-border        = 0
+	GtkRange       ::slider-width         = 14
+	GtkRange       ::stepper-size         = 14
+
+	GtkScale       ::slider-length        = 20  
+	GtkScale       ::trough-side-details  = 1
+	GtkScrollbar   ::min-slider-length    = 30  
+
+	GtkMenuBar     ::internal-padding     = 0
+	GtkExpander    ::expander-size        = 16
+	GtkToolbar     ::internal-padding     = 1
+	GtkTreeView    ::expander-size        = 14
+	GtkTreeView    ::vertical-separator   = 0
+
+	GtkMenu        ::horizontal-padding   = 0
+	GtkMenu        ::vertical-padding     = 0
+
+	WnckTasklist   ::fade-overlay-rect    = 0
+
+	GtkButton      ::focus-padding	      = 0  
+  	GtkScrolledWindow ::scrollbar-spacing  = 2 
+
+	GtkToolbar     ::shadow-type       = GTK_SHADOW_NONE  
+	GtkMenuBar     ::shadow-type       = GTK_SHADOW_NONE 
+	GtkStatusbar	::shadow_type	= GTK_SHADOW_NONE
+
+
+	xthickness = 1
+	ythickness = 1
+
+	fg[NORMAL]        = "#222222"
+	fg[PRELIGHT]      = "#222222"
+	fg[SELECTED]      = "#222222"
+	fg[ACTIVE]        = "#222222"
+	fg[INSENSITIVE]   = "#d0d0d0"
+
+	bg[NORMAL]        = "#ededed"
+	bg[PRELIGHT]      = "#ededed"
+	bg[SELECTED]	  = "#1793d1"
+	bg[INSENSITIVE]   = "#ededed"
+	bg[ACTIVE]        = "#ededed"
+
+	base[NORMAL]      = "#ffffff"
+	base[PRELIGHT]    = "#ffffff"
+	base[ACTIVE]      = "#1793d1"
+	base[SELECTED]    = "#1793d1"
+	base[INSENSITIVE] = "#ededed"
+
+	text[NORMAL]      = "#222222"
+	text[PRELIGHT]    = "#222222"
+	text[ACTIVE]      = "#ffffff"
+	text[SELECTED]    = "#ffffff"
+	text[INSENSITIVE] = "#d0d0d0"
+
+	engine "clearlooks" 
+	{
+#		colorize_scrollbar = TRUE  
+		reliefstyle        = 1  
+		menubarstyle       = 2 
+		toolbarstyle	   = 0  
+		animation          = TRUE  
+		style              = GUMMY  
+		radius = 0.0 
+	}
+}
+
+style "evolution-hack" = "clearlooks-default"
+{	
+	bg[NORMAL]   = "#ededed"  
+	bg[PRELIGHT]   = "#ededed"  
+	bg[ACTIVE]	= "#ededed" 
+	bg[SELECTED]	= "#1793d1" 
+	fg[ACTIVE]      = "#222222"
+	fg[SELECTED]    = "#ffffff"
+}
+
+style "clearlooks-wide"
+{
+	xthickness = 2 
+	ythickness = 2  
+}
+
+style "clearlooks-wider"
+{
+	xthickness = 3 
+	ythickness = 3  
+}
+
+style "clearlooks-button" = "clearlooks-wider"
+{
+	bg[NORMAL]   = "#ededed"  
+	bg[PRELIGHT] = "#f7f7f7"  
+	bg[ACTIVE]   = "#bfbfbf"  
+}
+
+style "clearlooks-notebook-bg"
+{
+	bg[NORMAL] = "#ffffff"  
+	bg[ACTIVE] = "#ededed" 
+}
+
+style "clearlooks-notebook" = "clearlooks-notebook-bg"
+{
+	xthickness = 1  
+	ythickness = 1  
+	engine "clearlooks" 
+	{
+		radius = 0.0 
+	}
+}
+
+style "clearlooks-tasklist" = "clearlooks-wide"
+{
+}
+
+style "clearlooks-menu"  
+{
+	bg[SELECTED] = "#525252"
+	bg[NORMAL]   = "#3C3C3C"
+	bg[PRELIGHT] = "#525252"
+	bg[ACTIVE]   = "#333333"
+	bg[INSENSITIVE] = "#3C3C3C"
+	fg[NORMAL]   = "#D4D4D4"
+	fg[PRELIGHT] = "#1793d1"
+	fg[SELECTED] = "#1793d1"
+	fg[ACTIVE]   = "#1793d1"
+	fg[INSENSITIVE] = "#666666"
+	text[NORMAL]   = "#222222"
+	text[PRELIGHT] = "#1793d1"
+	text[SELECTED] = "#1793d1"
+	text[ACTIVE]   = "#1793d1"
+	text[INSENSITIVE] = "#666666"
+	base[NORMAL]	= "#fff"
+}
+
+style "clearlooks-menu-item" = "clearlooks-wider"
+{
+	bg[SELECTED] = "#525252"
+	bg[PRELIGHT] = "#525252"
+}
+
+style "clearlooks-separator-menu-item"
+{
+	xthickness = 1
+	ythickness = 2
+
+  engine "pixmap"
+  {
+    image
+    {
+      function	  = HLINE
+      recolorable         = TRUE
+      file	  = "Menu-Menubar/menu-line.png"
+      border	  = { 1, 1, 1, 1 }
+      stretch	  = TRUE
+    }
+}
+}
+
+style "clearlooks-treeview"
+{
+	engine "clearlooks" {
+		style = GUMMY
+		radius = 0.0 
+	}
+}
+
+style "clearlooks-treeview-header" = "clearlooks-default"
+{
+	xthickness = 2
+	ythickness = 1
+	bg[NORMAL]   = "#EDEDED"  
+	bg[PRELIGHT]   = "#ededed"  
+	bg[ACTIVE]   = "#ededed"  
+}
+
+style "clearlooks-frame-title"
+{
+	fg[NORMAL] = "#222222"
+}
+
+style "clearlooks-tooltips" = "clearlooks-wider"
+{
+	bg[NORMAL] = "#f5f5b5"
+	fg[NORMAL] = "#222222"
+}
+
+style "metacity-frame" = "clearlooks-default"
+{
+#  bg[SELECTED]  = "#3c3c3c"  
+}
+
+style "clearlooks-progressbar"
+{
+	xthickness = 2
+	ythickness = 2
+	fg[PRELIGHT] = "#ffffff"  
+	engine "clearlooks"
+	{
+		radius = 0.0  
+	}
+}
+
+style "clearlooks-statusbar"
+{
+
+}
+
+style "clearlooks-comboboxentry"
+{
+
+}
+
+style "clearlooks-spinbutton"
+{
+	bg[ACTIVE]   = "#ededed" 
+
+}
+
+style "clearlooks-scale" = "clearlooks-button"
+{
+	bg[NORMAL]   = "#ededed"  
+	bg[PRELIGHT]   = "#1793d1"  
+	bg[ACTIVE]   = "#ededed"  
+
+}
+
+style "clearlooks-hscale" = "clearlooks-scale"
+{
+
+}
+
+style "clearlooks-vscale" = "clearlooks-scale"
+{
+
+}
+
+style "clearlooks-scrollbar"
+{
+	bg[NORMAL]   = "#ededed"  
+	bg[INSENSITIVE]   = "#ededed"  
+	bg[PRELIGHT]   = "#ededed" 
+	bg[ACTIVE]   = "#ededed"  
+#	bg[SELECTED] = "#ededed"  
+	engine "clearlooks"
+	{
+		radius = 0.0  
+	}
+}
+
+style "clearlooks-hscrollbar" = "clearlooks-scrollbar"
+{
+
+}
+
+style "clearlooks-vscrollbar" = "clearlooks-scrollbar"
+{
+
+}
+
+style "clearlooks-menubar"
+{
+	ythickness = 0
+	bg[SELECTED] = "#525252"
+	bg[NORMAL]   = "#3C3C3C"
+	bg[PRELIGHT] = "#525252"
+	bg[ACTIVE]   = "#333333"
+	bg[INSENSITIVE] = "#3C3C3C"
+	fg[NORMAL]   = "#D4D4D4"
+	fg[PRELIGHT] = "#1793d1"
+	fg[SELECTED] = "#1793d1"
+	fg[ACTIVE]   = "#1793d1"
+	fg[INSENSITIVE] = "#666666"
+	text[NORMAL]   = "#222222"
+	text[PRELIGHT] = "#1793d1"
+	text[SELECTED] = "#1793d1"
+	text[ACTIVE]   = "#1793d1"
+	text[INSENSITIVE] = "#666666"
+}
+
+style "clearlooks-nautilus-location"
+{
+	bg[NORMAL] = "#1793d1" 
+}
+
+style "clearlooks-radiocheck" = "clearlooks-default"
+{
+	text[NORMAL]	= "#222222"
+	bg[SELECTED]	= "#222222"
+}
+
+class "GtkWidget"    style "clearlooks-default"
+class "GtkFrame"     style "clearlooks-wide"
+class "GtkEntry"     style "clearlooks-wider"
+class "MetaFrames"   style "metacity-frame"
+class "GtkSeparator" style "clearlooks-wide"
+class "GtkWindow"    style "metacity-frame"
+class "GtkCalendar"  style "clearlooks-wide"
+
+class "GtkSpinButton"  style "clearlooks-spinbutton"
+class "GtkScale"       style "clearlooks-scale"
+class "GtkVScale"      style "clearlooks-vscale"
+class "GtkHScale"      style "clearlooks-hscale"
+class "GtkScrollbar"   style "clearlooks-scrollbar"
+class "GtkVScrollbar"  style "clearlooks-vscrollbar"
+class "GtkHScrollbar"  style "clearlooks-hscrollbar"
+
+class "GtkRadio*"	style "clearlooks-radiocheck"
+class "GtkCheck*"	style "clearlooks-radiocheck"
+widget_class "*<GtkNotebook>*<GtkEventBox>"     style "clearlooks-notebook-bg"
+widget_class "*<GtkNotebook>*<GtkDrawingArea>"  style "clearlooks-notebook-bg"
+widget_class "*<GtkNotebook>*<GtkLayout>"       style "clearlooks-notebook-bg"
+widget_class "*.GtkNotebook.*.GtkViewport"	style "clearlooks-notebook"
+
+widget_class "*<GtkButton>"      style "clearlooks-button"
+widget_class "*<GtkNotebook>"    style "clearlooks-notebook"
+widget_class "*<GtkStatusbar>*"  style "clearlooks-statusbar"
+
+widget_class "*<GtkComboBoxEntry>*" style "clearlooks-comboboxentry"
+widget_class "*<GtkCombo>*"         style "clearlooks-comboboxentry"
+
+widget_class "*<GtkMenuBar>*"           style "clearlooks-menubar"
+widget_class "*<GtkMenu>*"              style "clearlooks-menu"
+widget_class "*<GtkMenuItem>*"          style "clearlooks-menu-item"
+widget_class "*<GtkSeparatorMenuItem>*" style "clearlooks-separator-menu-item"
+
+widget_class "*.<GtkFrame>.<GtkLabel>" style "clearlooks-frame-title"
+widget_class "*.<GtkTreeView>*"        style "clearlooks-treeview"
+
+widget_class "*<GtkProgressBar>"       style "clearlooks-progressbar"
+
+
+widget_class "*.<GtkTreeView>.<GtkButton>" style "clearlooks-treeview-header"
+widget_class "*.<GtkCTree>.<GtkButton>"    style "clearlooks-treeview-header"
+widget_class "*.<GtkList>.<GtkButton>"     style "clearlooks-treeview-header"
+widget_class "*.<GtkCList>.<GtkButton>"    style "clearlooks-treeview-header"
+
+
+widget_class "*.ETable.ECanvas"    style "clearlooks-treeview-header"
+widget_class "*.ETree.ECanvas"    style "clearlooks-treeview-header"
+widget_class "*GtkCTree*"	style "evolution-hack"
+widget_class "*GtkList*"	style "evolution-hack"
+widget_class "*GtkCList*"	style "evolution-hack"
+widget_class "*.ETree.*"	style "evolution-hack"
+widget_class "*EInfoLabel*"	style "evolution-hack"
+
+
+widget "gtk-tooltip*" style "clearlooks-tooltips"
+
+
+widget "*.nautilus-extra-view-widget" style : highest "clearlooks-nautilus-location"
+
+
+style "clearlooks-text-is-fg-color-workaround"
+{
+	text[NORMAL]      = "#222222"
+	text[PRELIGHT]    = "#222222"
+	text[SELECTED]    = "#222222"
+	text[ACTIVE]      = "#222222"
+	text[INSENSITIVE] = "#d0d0d0"
+}
+widget_class "*.<GtkComboBox>.<GtkCellView>"   style "clearlooks-text-is-fg-color-workaround"
+
+style "clearlooks-menuitem-text-is-fg-color-workaround"
+{
+	text[NORMAL]        = "#D4D4D4"
+	text[PRELIGHT]      = "#1793d1"
+	text[SELECTED]      = "#1793d1"
+	text[ACTIVE]        = "#222222"
+	text[INSENSITIVE]   = "#d0d0d0"
+}
+widget "*.gtk-combobox-popup-menu.*"   style "clearlooks-menuitem-text-is-fg-color-workaround"
+
+style "clearlooks-fg-is-text-color-workaround"
+{
+	fg[NORMAL]      = "#222222"
+	fg[PRELIGHT]    = "#222222"
+	fg[ACTIVE]      = "#ffffff"
+	fg[SELECTED]    = "#ffffff"
+	fg[INSENSITIVE] = "#d0d0d0"
+}
+widget_class "*<GtkListItem>*" style "clearlooks-fg-is-text-color-workaround"
+
+widget_class "*<GtkCList>" style "clearlooks-fg-is-text-color-workaround"
+widget_class "*<EelEditableLabel>" style "clearlooks-fg-is-text-color-workaround"
+
+style "inactivetext2"
+{
+
+engine "mist"
+ 	{
+	}
+}
+
+widget_class "*.<GtkMenuItem>.*" style "inactivetext2"
+
