@@ -1,0 +1,19 @@
+#!/bin/bash
+# This file must be in /usr/local/bin/
+
+xrdb -merge .Xresources
+
+trayer --edge top --align right --SetDockType true --SetPartialStrut true --expand true --width 10 --height 12 --tint 0x000000 &
+
+gnome-screensaver
+
+gnome-settings-daemon
+
+if [ -x /usr/bin/gnome-power-manager ]; then
+    sleep 1
+    gnome-power-manager
+fi
+
+#feh --bg-scale /path/to/image
+
+exec xmonad
