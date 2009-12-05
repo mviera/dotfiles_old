@@ -15,6 +15,7 @@ xmonad $ defaultConfig {
             ppOutput = hPutStrLn xmproc,
             ppTitle = xmobarColor "green" "" . shorten 50
             },
+        focusedBorderColor = "#339999",
         modMask = mod4Mask -- Rebind the Mod to the Windows key
         } `additionalKeys`
             [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock"),

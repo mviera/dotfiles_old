@@ -1,0 +1,9 @@
+[Desktop Entry]
+# This file must be in /usr/share/xsessions/
+Encoding=UTF-8
+Name=XMonad
+Comment=Leightweight tiling window manager
+Exec=xmonad.start
+Icon=xmonad.png
+Type=XSession
+
