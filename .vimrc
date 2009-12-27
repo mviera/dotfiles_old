@@ -69,7 +69,7 @@ set laststatus=2 " always show the status line
 set laststatus=2
 
 function! CurDir()
-    let curdir = substitute(getcwd(), '/home/antonio/', "~/", "g")
+    let curdir = substitute(getcwd(), '/home/mviera/', "~/", "g")
     return curdir
 endfunction
 
@@ -213,12 +213,6 @@ let xml_tag_completion_map = "<C-l>"
 set filetype=htmldjango
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" TWITTER
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let twitvim_login="mviera:t6_&5r3m" 
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " LaTeX
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " IMPORTANT: grep will sometimes skip displaying the file name if you
@@ -240,3 +234,9 @@ set sw=4
 " all the figure labels. Very useful!
 set iskeyword+=:
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ROPE (Python refactoring)
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let $PYTHONPATH.=":/home/mviera/.vim/ext/rope:/home/mviera/.vim/ext/ropemode:/home/mviera/.vim/ext/ropevim"
+source ~/.vim/ext/ropevim/ropevim.vim
