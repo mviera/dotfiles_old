@@ -6,10 +6,11 @@ import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
 
 main = do
-xmproc <- spawnPipe "/usr/local/bin/xmobar /home/mviera/.xmobarrc"
+xmproc <- spawnPipe "/usr/bin/xmobar /home/mviera/.xmobarrc"
 xmonad $ defaultConfig {
-        manageHook = manageDocks <+> manageHook defaultConfig,
+        manageHook = myManageHook <+> manageHook defaultConfig,
         layoutHook = avoidStruts  $  layoutHook defaultConfig, 
+        terminal = "urxvt", 
         logHook = dynamicLogWithPP $ xmobarPP
             {
             ppOutput = hPutStrLn xmproc,
