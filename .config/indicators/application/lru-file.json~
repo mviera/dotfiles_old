@@ -1,0 +1,5 @@
+{
+  "version": 1,
+  "bluetooth-manager": { "first-time": "2010-04-19T20:52:13.795048Z", "last-time": "2010-04-19T20:52:13.795051Z", "category": "Hardware"},
+  "gnome-power-manager": { "first-time": "2010-04-19T20:52:13.838143Z", "last-time": "2010-04-19T20:52:13.838144Z", "category": "Hardware"}
+}
