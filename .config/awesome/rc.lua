@@ -11,7 +11,7 @@ require("debian.menu")
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 -- The default is a dark theme
-theme_path = "/usr/share/awesome/themes/default/theme.lua"
+theme_path = "/home/mviera/.config/awesome/themes/default/theme.lua"
 -- Uncommment this for a lighter theme
 -- theme_path = "/usr/share/awesome/themes/sky/theme.lua"
 
@@ -19,7 +19,7 @@ theme_path = "/usr/share/awesome/themes/default/theme.lua"
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
-terminal = "x-terminal-emulator"
+terminal = "urxvt"
 editor = os.getenv("EDITOR") or "editor"
 editor_cmd = terminal .. " -e " .. editor
 
@@ -434,3 +434,8 @@ awful.hooks.timer.register(60, function ()
     mytextbox.text = os.date(" %a %b %d, %H:%M ")
 end)
 -- }}}
+
+-- Autostart applications
+awful.util.spawn_with_shell("gnome-settings-daemon")
+awful.util.spawn_with_shell("gnome-power-manager")
+awful.util.spawn_with_shell("nm-applet")
