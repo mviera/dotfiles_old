@@ -436,6 +436,5 @@ end)
 -- }}}
 
 -- Autostart applications
-awful.util.spawn_with_shell("gnome-settings-daemon")
 awful.util.spawn_with_shell("gnome-power-manager")
 awful.util.spawn_with_shell("nm-applet")
